@@ -7,6 +7,13 @@ export const Container = styled.div`
 		width: 100%;
 		border-spacing: 0 0.5rem;
 
+		@media (max-width: 555px)
+		{
+			display: block;
+			overflow-x: auto;
+			white-space: nowrap;
+		}
+
 		th{
 			color: var(--text-body);
 			font-weight: 400;

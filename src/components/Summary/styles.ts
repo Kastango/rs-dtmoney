@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 	gap: 2rem;
 	margin-top: -7rem;
 
@@ -29,6 +29,16 @@ export const Container = styled.div`
 		&.highlight-background {
 			background: var(--green);
 			color: #fff;
+
+			@media (max-width: 839px)
+			{
+				grid-column:1/3;
+			}
+
+			@media (max-width: 555px)
+			{
+				grid-column: 1
+			}
 		}
 	}
 `;
